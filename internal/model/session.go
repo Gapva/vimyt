@@ -50,6 +50,8 @@ type Session struct {
 	LoopCount         int               `json:"loop_count"`      // remaining loops (0 = infinite)
 	LoopTotal         int               `json:"loop_total"`      // original loop count for display
 	Theme             map[string]string `json:"theme,omitempty"` // custom color theme overrides
+	DiscordAppID      string            `json:"discord_app_id"`  // user's Discord application ID (empty = RPC not set up)
+	DiscordRPC        bool              `json:"discord_rpc"`     // publish Discord Rich Presence
 }
 
 func sessionPath() (string, error) {
